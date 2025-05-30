@@ -3,7 +3,7 @@ dotenv.config();
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDu6SutMtjIVe9lJEnMhOw26QCtTM87hzQ");
+const genAI = new GoogleGenerativeAI("AIzaSyDcEVg3fFWZUGTjCXfNpnAa708_4aMkYDI");
 
 export const fetchGeminiResponse = async (systemInstruction, userInstruction, model = "models/gemini-1.5-pro-latest") => {
   try {
