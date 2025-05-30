@@ -3,9 +3,9 @@ dotenv.config();
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDcEVg3fFWZUGTjCXfNpnAa708_4aMkYDI");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-export const fetchGeminiResponse = async (systemInstruction, userInstruction, model = "models/gemini-1.5-pro-latest") => {
+export const fetchGeminiResponse = async (systemInstruction, userInstruction, model = "models/gemini-1.5-pro") => {
   try {
     const modelInstance = genAI.getGenerativeModel({ model });
     const prompt = `${systemInstruction}\n${userInstruction}`;
